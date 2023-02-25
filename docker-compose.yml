@@ -1,18 +1,16 @@
-version: '3.7'
+version: '3.5'
 
 services:
-
   dashboard:
     container_name: dashboard
-    tty: true
+    restart: unless-stopped
     build:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - '.:/app'
-      - '/app/node_modules'
-    ports:
-      - 9010:3000
+      - '.:/cas-dashboard'
+      - '/cas-dashboard/node_modules'
     environment:
-      - CHOKIDAR_USEPOLLING=true
-    restart: unless-stopped
+      REACT_APP_BASE_PATH: "/dashboard"
+    ports:
+      - 9000:80
