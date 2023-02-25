@@ -1,16 +1,15 @@
-version: '3.5'
+version: "3.5"
 
 services:
   dashboard:
-    container_name: dashboard
+    container_name: cas-dashboard
     restart: unless-stopped
     build:
       context: .
       dockerfile: Dockerfile
+    ports:
+      - 8080:80
     volumes:
-      - '.:/cas-dashboard'
-      - '/cas-dashboard/node_modules'
+      - "/cas-dashboard/node_modules"
     environment:
       REACT_APP_BASE_PATH: "/dashboard"
-    ports:
-      - 9000:80
