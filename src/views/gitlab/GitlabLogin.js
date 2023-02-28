@@ -106,7 +106,7 @@ function GitlabLogin(props){
                   <Button
                     variant="contained"
                     color="secondary"
-                    onClick={() => window.location = `${config.URL}/gitlab/users/sign_up`}
+                    onClick={() => window.location = `${process.env.REACT_APP_GITLAB_URL}/users/sign_up`}
                     startIcon={<GitlabIcon/>}
                   >
                     Gitlab

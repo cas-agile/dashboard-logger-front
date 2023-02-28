@@ -103,7 +103,7 @@ function SonarLogin(props){
                   <Button
                     variant="contained"
                     color="secondary"
-                    onClick={() => window.location = `${config.URL}/sonarqube`}
+                    onClick={() => window.location = `${process.env.REACT_APP_SONARQUBE_URL}`}
                     startIcon={<SonarQubeIcon/>}
                   >
                     SonarQube

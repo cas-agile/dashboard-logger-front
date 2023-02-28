@@ -1,7 +1,7 @@
 import { config } from "./config";
 import axios from 'axios';
 
-const gitlabProjectsRoute = `${config.URL}/gitlab/${config.API.GITLAB_PROJECTS}`;
+const gitlabProjectsRoute = `${process.env.REACT_APP_GITLAB_URL}/${config.API.GITLAB_PROJECTS}`;
 
 export function checkToken(token){
   return axios({url: gitlabProjectsRoute, headers :{"PRIVATE-TOKEN":token}});

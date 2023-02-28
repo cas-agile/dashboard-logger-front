@@ -1,8 +1,8 @@
 import { config } from "./config";
 import axios from 'axios';
 
-const usersRoute = `${config.URL}/mattermost/${config.API.MATTERMOST_USERS}`;
-const channelsRoute = `${config.URL}/mattermost/${config.API.MATTERMOST_CHANNELS}`;
+const usersRoute = `${process.env.REACT_APP_MATTERMOST_URL}/${config.API.MATTERMOST_USERS}`;
+const channelsRoute = `${process.env.REACT_APP_MATTERMOST_URL}/${config.API.MATTERMOST_CHANNELS}`;
 
 export function loginUser(values){
   const route = usersRoute+'/login';

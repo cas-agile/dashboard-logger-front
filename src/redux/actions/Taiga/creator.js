@@ -51,7 +51,7 @@ function getProjects() {
                         description: proj.description,
                         members: proj.members,
                         is_private: proj.is_private,
-                        address: `${config.URL}/project/${proj.slug}`
+                        address: `${process.env.REACT_APP_TAIGA_URL}/project/${proj.slug}`
                     }
                     projects.push(x)
 

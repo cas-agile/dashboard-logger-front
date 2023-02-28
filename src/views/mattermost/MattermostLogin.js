@@ -136,7 +136,7 @@ function MattermostLogin(props){
                   <Button
                     variant="contained"
                     color="secondary"
-                    onClick={() => window.location = `${config.URL}/mattermost/login`}
+                    onClick={() => window.location = `${process.env.REACT_APP_MATTERMOST_URL}/login`}
                     startIcon={<MattermostIcon/>}
                   >
                     Mattermost

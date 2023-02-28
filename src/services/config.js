@@ -1,8 +1,8 @@
 export const config = {
-  URL: "http://localhost:9005",
+  URL: process.env.PUBLIC_URL,
 
-  PORT_NUMBER: "443",
-  SONAR_API:"sonarqube-api",
+  // PORT_NUMBER: "443",
+  // SONAR_API:"sonarqube-api",
 
   API: {
     VERSION: "V1",

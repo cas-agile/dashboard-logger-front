@@ -33,7 +33,7 @@ function MattermostDialog(props) {
         <ListItem key={index}>
           <ListItemText primary={message.channel} />
           <ListItemSecondaryAction>
-            <IconButton edge="end" aria-label="mail" onClick={() => window.location = `${config.URL}/mattermost`}>
+            <IconButton edge="end" aria-label="mail" onClick={() => window.location = `${process.env.REACT_APP_MATTERMOST_URL}`}>
               <Badge badgeContent={message.num} color="primary">
                 <MailIcon />
               </Badge>

@@ -69,7 +69,7 @@ function getProjects(){
                       last_analysis: analysis,
                       name: p.name,
                       quality_gate: qual,
-                      address: `${config.URL}/sonarqube?id=${p.key}`,
+                      address: `${process.env.REACT_APP_SONARQUBE_URL}?id=${p.key}`,
                       debt: debt
                     };
                     dispatch(sonar.setProjects(proj));
