@@ -129,7 +129,7 @@ function LoginView(props){
                   <Button
                     variant="contained"
                     color="secondary"
-                    onClick={() => window.location = `${process.env.REACT_APP_TAIGA_URL}/taiga/register`}
+                    onClick={() => window.location = `${process.env.REACT_APP_TAIGA_URL}/register`}
                     startIcon={<TaigaIcon/>}
                   >
                     Taiga
