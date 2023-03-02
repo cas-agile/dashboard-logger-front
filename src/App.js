@@ -22,7 +22,7 @@ class App extends Component{
     return (
       <ThemeProvider theme={theme}>
         <ReduxProvider store={store}>
-          <Router basename="/">
+          <Router basename={new URL(process.env.PUBLIC_URL).pathname}>
             <DashboardLayout >
               <Switch>
                 <Route exact path="/">
