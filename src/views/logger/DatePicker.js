@@ -36,6 +36,9 @@ function StaticDatePicker(props) {
               >
                 Logger Dashboard
               </Typography>
+              <Typography variant="h5" >
+                Logger Server: { process.env.REACT_APP_LOGGER_URL }
+              </Typography>
             </Grid>
             <Grid item
               xs={12}
