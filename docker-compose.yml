@@ -11,9 +11,6 @@ services:
         PUBLIC_URL: "http://example.org"
         LOGGER_URL: "http://example.org/logger"
         GITLAB_URL: "http://example.org/gitlab"
-        TAIGA_URL: "http://example.org/taiga"
-        MATTERMOST_URL: "http://example.org/mattermost"
-        SONARQUBE_URL: "http://example.org/sonarqube"
     ports:
       - 8080:80
     volumes:

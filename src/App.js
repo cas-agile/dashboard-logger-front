@@ -19,10 +19,14 @@ import {config} from 'src/services/config';
 class App extends Component{
 
   render() {
+    let basepath;
+    try { basepath = new URL(process.env.PUBLIC_URL).pathname; }
+    catch (err) { basepath = "/"; }
+
     return (
       <ThemeProvider theme={theme}>
         <ReduxProvider store={store}>
-          <Router basename={new URL(process.env.PUBLIC_URL).pathname}>
+          <Router basename={basepath}>
             <DashboardLayout >
               <Switch>
                 <Route exact path="/">
@@ -32,9 +36,8 @@ class App extends Component{
                 <Route exact path="/register" component={RegisterView}/>
                 <Route exact path='/logger' component={LoggerView}/>
                 <Route exact path='/gitlab' component={GitlabPage}/>
-                <Route exact path='/taiga' component={TaigaPage}/>
-                <Route exact path='/sonar' component={SonarPage}/>
-                <Route exact path='/jenkins' component={() => window.location = `${config.URL}/jenkins`}/>
+                {/* <Route exact path='/taiga' component={TaigaPage}/>
+                <Route exact path='/sonar' component={SonarPage}/> */}
                 <Route path="/*" component={NotFoundView}/>
               </Switch>
             </DashboardLayout>

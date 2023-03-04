@@ -55,7 +55,7 @@ function TopBar(props) {
           <Logo className={classes.logo}/>
         </RouterLink>
         <Box flexGrow={1} />
-        <IconButton
+        {/* <IconButton
           color="inherit"
           onClick={handleClick}
         >
@@ -80,7 +80,7 @@ function TopBar(props) {
              }}
            >
            <Mattermost close={handleClose}/>
-         </Popover>
+         </Popover> */}
         <Hidden lgUp>
           <IconButton
             color="inherit"

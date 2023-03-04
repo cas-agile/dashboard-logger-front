@@ -22,7 +22,6 @@ import {
 import GitlabIcon from 'src/assets/icons/GitlabIcon';
 import TaigaIcon from 'src/assets/icons/TaigaIcon';
 import SonarQubeIcon from "src/assets/icons/SonarQubeIcon";
-import JenkinsIcon from "src/assets/icons/JenkinsIcon";
 import NavItem from './NavItem';
 import { loggerCreator } from "src/redux/actions/Logger/loggerCreator";
 import { appActions } from "src/redux/actions/App/appActions";
@@ -42,24 +41,19 @@ const dashItems = [
     icon: GitlabIcon,
     title: 'Gitlab'
   },
-  {
-    href: '/taiga',
-    icon: TaigaIcon,
-    title: 'Taiga'
-  },
-  {
-    href: '/sonar',
-    icon: SonarQubeIcon,
-    title: 'SonarQube'
-  }
+  // {
+  //   href: '/taiga',
+  //   icon: TaigaIcon,
+  //   title: 'Taiga'
+  // },
+  // {
+  //   href: '/sonar',
+  //   icon: SonarQubeIcon,
+  //   title: 'SonarQube'
+  // }
 ];
 
 const otherItems = [
-  {
-    href: '/jenkins',
-    icon: JenkinsIcon,
-    title: 'Jenkins'
-  }
 ];
 
 const useStyles = makeStyles(() => ({
@@ -142,10 +136,10 @@ function NavBar(props){
            />
          ))}
          <Divider/>
-         <ListSubheader component="div" id="2">
+         {/* <ListSubheader component="div" id="2">
             Other CAS Services
          </ListSubheader>
-         <Divider/>
+         <Divider/> */}
          {otherItems.map((item) => (
            <NavItem
              href={item.href}

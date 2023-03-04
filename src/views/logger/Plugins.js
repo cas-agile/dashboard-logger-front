@@ -18,24 +18,17 @@ import GitlabIcon from 'src/assets/icons/GitlabIcon';
 const data = [
   {
     id: uuid(),
-    name: 'Atom',
-    imageUrl: `${process.env.PUBLIC_URL}/static/images/plugins/atom.png`,
-    repository: 'https://github.com/elPeroN/atom-logger',
+    name: 'VS Code',
+    imageUrl: `${process.env.PUBLIC_URL}/static/images/plugins/vscode.png`,
+    repository: 'https://github.com/cas-agile/logger-vscode',
     repositoryIcon: [<GitHubIcon key={uuid()}/>]
-  },
-  {
-    id: uuid(),
-    name: 'Eclipse',
-    imageUrl: `${process.env.PUBLIC_URL}/static/images/plugins/eclipse.png`,
-    repository: 'https://gitlab.com/Siber93/cas-eclipse-plugin',
-    repositoryIcon: [<GitlabIcon key={uuid()}/>]
   },
   {
     id: uuid(),
     name: 'IntelliJ Idea',
     imageUrl: `${process.env.PUBLIC_URL}/static/images/plugins/idea.png`,
-    repository: 'https://gitlab.com/fulvio1993/logger-intellij',
-    repositoryIcon: [<GitlabIcon key={uuid()}/>]
+    repository: 'https://github.com/cas-agile/logger-intellij',
+    repositoryIcon: [<GitHubIcon key={uuid()}/>]
   }
 ];
 
