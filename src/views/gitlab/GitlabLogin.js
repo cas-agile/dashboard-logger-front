@@ -42,7 +42,7 @@ function GitlabLogin(props){
               token: ''
             }}
             validationSchema={Yup.object().shape({
-              token: Yup.string().max(20).required('Personal Token is required'),
+              token: Yup.string().required('Personal Token is required'),
             })}
             onSubmit={(values,act) => {
               props.login(values).then(act.setSubmitting(false));
